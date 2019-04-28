@@ -26,7 +26,7 @@ class Main extends Component {
                 <h1> FEEL First Before You Communicate TEST </h1>
                 <img className="pic" src={feel}></img>
                 <div>
-                    <Button onClick={this.goToQuiz} class='btn btn-lg btn-info'>Start the FEEL test!</Button>
+                    <Button onClick={this.goToQuiz} className='btn btn-lg btn-info'>Start the FEEL test!</Button>
                 </div>
                 <Footer/>
             </div>

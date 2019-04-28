@@ -22,21 +22,22 @@ class Question extends Component {
         console.log("You have submitted:", this.state.selectedOption);
     };
 
-    RenderRating(number) {
+    RenderRating(displayOption) {
         return (
-            <div className="form-check col-sm-1">
+            <div className="form-check col-md-2">
                 <label>
                     <input
                         type="radio"
                         name="react-tips"
-                        value={number}
-                        checked={this.state.selectedOption === number}
+                        value={displayOption}
+                        checked={this.state.selectedOption === displayOption}
                         onChange={this.handleOptionChange}
                         className="form-check-input"
                     />
                     <span className="checkmark"></span>
-                    {number}
+                    {displayOption}
                 </label>
+
             </div>
         );
     }
@@ -45,9 +46,10 @@ class Question extends Component {
         return (
             <div className="container">
                 <div className="row">
-                    <h4>{this.props.question_text}</h4>
+                    <h3>{this.props.question_text}</h3>
                     <form className="form-inline questions" onSubmit={this.handleFormSubmit}>
                         <div className="row">
+                            <div className={"col-md-1"}/>
                             {this.RenderRating("Never")}
                             {this.RenderRating("Rarely")}
                             {this.RenderRating("Sometimes")}

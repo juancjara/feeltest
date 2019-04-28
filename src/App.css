@@ -29,9 +29,6 @@
 }
 
 
-input {
-    padding:100px;
-}
 
 @keyframes App-logo-spin {
   from {
@@ -46,9 +43,9 @@ input {
     display: block;
     position: relative;
     padding-left: 35px;
-    margin-bottom: 12px;
-    cursor: pointer;
-    font-size: 22px;
+    padding-bottom: 12px;
+    cursor: auto;
+    font-size: 20px;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
@@ -59,9 +56,10 @@ input {
 .questions input {
     position: absolute;
     opacity: 0;
-    cursor: pointer;
+    cursor: None;
     height: 0;
     width: 0;
+
 }
 
 /* Create a custom radio button */
@@ -71,6 +69,8 @@ input {
     left: 0;
     height: 25px;
     width: 25px;
+    cursor: pointer;
+    margin-top:20px;
     background-color: #e9e7e7;
     border-radius: 50%;
 }
@@ -82,7 +82,7 @@ input {
 
 /* When the radio button is checked, add a background */
 .questions input:checked ~ .checkmark {
-    background-color: #81e975;
+    background-color: #000000;
 }
 
 /* Create the indicator (the dot/circle - hidden when not checked) */
@@ -107,6 +107,11 @@ input {
     background: #ffffff;
 }
 
+.form-check {
+    padding-bottom:20px;
+    padding-top:20px;
+}
+
 .footer{
     padding: 200px 0px 50px 0px;
 }
@@ -120,21 +125,16 @@ input {
 }
 
 
-
 .one {
     background-color: #add8e6;
-
-
 }
 
 .two {
     background-color: #b9eeb4;
-
 }
 
 .three {
     background-color: #9ea5ee;
-
 }
 
 .four {

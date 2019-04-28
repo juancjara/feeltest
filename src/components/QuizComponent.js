@@ -24,7 +24,7 @@ class Quiz extends Component {
 
     render() {
         return (
-            <div class="container">
+            <div className="container-fluid">
                 <div className={"one"}>
                     <Header/>
                     <h1>Part I: Face Fears</h1>
@@ -70,7 +70,7 @@ class Quiz extends Component {
 
 
                 <div>
-                    <Button class='btn btn-lg btn-info'>Submit</Button>
+                    <Button className='btn btn-lg btn-info'>Submit</Button>
                 </div>
                 <Footer/>
             </div>
