@@ -26,8 +26,9 @@
 
 .pic {
     padding:100px;
+    max-height: 100%;
+    max-width: 100%;
 }
-
 
 
 @keyframes App-logo-spin {
@@ -107,37 +108,69 @@
     background: #ffffff;
 }
 
-.form-check {
-    padding-bottom:20px;
-    padding-top:20px;
-}
 
 .footer{
-    padding: 200px 0px 50px 0px;
+    padding: 100px 0px 0px 0px;
 }
 
 .header{
     padding: 200px 0px 2000px 0px;
 }
 
-.navbar-dark {
-    background-color: #512DA8;
-}
 
-
-.one {
+.bg0 {
     background-color: #add8e6;
 }
 
-.two {
+.bg1 {
     background-color: #b9eeb4;
 }
 
-.three {
+.bg2 {
     background-color: #9ea5ee;
 }
 
-.four {
+.bg3 {
     background-color: #a99adb;
 
+}
+
+.quiz-container {
+    background-color: #add8e6;
+}
+
+img {
+    max-height: 40%;
+    max-width: 40%;
+}
+
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #111;
+}
+
+.option {
+    margin-right:38px;
+    font-size: 95%;
+    margin-top:18px;
 }

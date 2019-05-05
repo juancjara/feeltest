@@ -4,7 +4,6 @@ function Footer(props) {
 
     return(
         <div className="footer">
-            <div className="container">
                 <div className="row justify-content-center">
                     <div className="col-12 align-self-center">
                         <div className="text-center">
@@ -21,7 +20,6 @@ function Footer(props) {
                         <p>© Copyright Deidre Breakenridge</p>
                     </div>
                 </div>
-            </div>
         </div>
     )
 }

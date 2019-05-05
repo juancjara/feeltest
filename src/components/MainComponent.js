@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Footer from "./FooterComponent";
 import feel from "../Feel_pic.png";
-import {Button} from 'reactstrap';
+import {Button, Jumbotron} from 'reactstrap';
 import { withRouter } from 'react-router-dom'
 import Header from "./HeaderComponent";
 
@@ -23,8 +23,19 @@ class Main extends Component {
         return (
             <div>
                 <Header/>
-                <h1> FEEL First Before You Communicate TEST </h1>
-                <img className="pic" src={feel}></img>
+                <Jumbotron>
+                    <div className="container">
+                        <div className="row row-header">
+                            <div className="col-12 col-sm-6">
+                                <h2>FEEL TEST</h2>
+                                <p>FEEL First Before You Communicate</p>
+                            </div>
+                            <div className={"col-12 col-sm-6"}>
+                                <img src={feel} alt="FEEL" />
+                            </div>
+                        </div>
+                    </div>
+                </Jumbotron>
                 <div>
                     <Button onClick={this.goToQuiz} className='btn btn-lg btn-info'>Start the FEEL test!</Button>
                 </div>

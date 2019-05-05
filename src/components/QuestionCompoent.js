@@ -5,24 +5,23 @@ class Question extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            selectedOption: "option1"
+            selectedOption: "noneselected",
         };
+        this.score = {'Never': 1, 'Rarely': 2, 'Sometimes': 3, 'Often': 4, 'Always': 5};
         this.RenderRating = this.RenderRating.bind(this);
     }
 
     handleOptionChange = changeEvent => {
+        console.log(changeEvent.target.value);
         this.setState({
             selectedOption: changeEvent.target.value
         });
-    };
-
-    handleFormSubmit = formSubmitEvent => {
-        formSubmitEvent.preventDefault();
-
-        console.log("You have submitted:", this.state.selectedOption);
+        this.props.onChange(this.props.id, this.score[changeEvent.target.value]);
+        console.log(this.props.CSV + 'CDV');
     };
 
     RenderRating(displayOption) {
+
         return (
             <div className="form-check col-md-2">
                 <label>
@@ -30,12 +29,12 @@ class Question extends Component {
                         type="radio"
                         name="react-tips"
                         value={displayOption}
-                        checked={this.state.selectedOption === displayOption}
+                        checked={this.state.selectedOption === displayOption && this.props.reload === false}
                         onChange={this.handleOptionChange}
                         className="form-check-input"
                     />
                     <span className="checkmark"></span>
-                    {displayOption}
+                    <p className="option">{displayOption}</p>
                 </label>
 
             </div>
@@ -46,8 +45,8 @@ class Question extends Component {
         return (
             <div className="container">
                 <div className="row">
-                    <h3>{this.props.question_text}</h3>
-                    <form className="form-inline questions" onSubmit={this.handleFormSubmit}>
+                    <h4>{this.props.question_text}</h4>
+                    <form className="form-inline questions">
                         <div className="row">
                             <div className={"col-md-1"}/>
                             {this.RenderRating("Never")}
