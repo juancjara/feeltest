@@ -12,7 +12,7 @@ class App extends Component {
   render() {
     return (
         <BrowserRouter>
-            <div className="App container-fluid">
+            <div className="App container">
                 <Route exact path="/" component={Main} />
                 <Route exact path="/FEEL" component={Quiz} />
                 <Route exact path="/Result" component={Result} />

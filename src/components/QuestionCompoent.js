@@ -43,21 +43,21 @@ class Question extends Component {
 
     render() {
         return (
-            <div className="container">
-                <div className="row">
-                    <h4>{this.props.question_text}</h4>
-                    <form className="form-inline questions">
-                        <div className="row">
-                            <div className={"col-md-1"}/>
-                            {this.RenderRating("Never")}
-                            {this.RenderRating("Rarely")}
-                            {this.RenderRating("Sometimes")}
-                            {this.RenderRating("Often")}
-                            {this.RenderRating("Always")}
-                        </div>
-                    </form>
-                </div>
+
+            <div className="row">
+                <h4>{this.props.question_text}</h4>
+                <form className="form-inline questions">
+                    <div className="row">
+                        <div className={"col-md-1"}/>
+                        {this.RenderRating("Never")}
+                        {this.RenderRating("Rarely")}
+                        {this.RenderRating("Sometimes")}
+                        {this.RenderRating("Often")}
+                        {this.RenderRating("Always")}
+                    </div>
+                </form>
             </div>
+
         )
     }
 }

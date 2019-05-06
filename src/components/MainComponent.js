@@ -21,14 +21,23 @@ class Main extends Component {
 
     render() {
         return (
-            <div>
+            <div className="main-container">
                 <Header/>
                 <Jumbotron>
                     <div className="container">
                         <div className="row row-header">
                             <div className="col-12 col-sm-6">
                                 <h2>FEEL TEST</h2>
-                                <p>FEEL First Before You Communicate</p>
+
+                                <h3>If you FEEL first before you communicate, you'll build stronger relationships
+                                    through all of your online channels and in-person too. Here are several questions
+                                    you can ask yourself about Facing your Fears, communicating with Empathy, using
+                                    Ethics and good judgment and discovering your Love for the mission.
+                                    Modern Communicators are generally taught to consider their audience, timing,
+                                    channels, messaging and measurement. However, when you add FEEL to your plan,
+                                    your communications will resonate and your relationships will grow stronger with
+                                    the people that matter.
+                                </h3>
                             </div>
                             <div className={"col-12 col-sm-6"}>
                                 <img src={feel} alt="FEEL" />

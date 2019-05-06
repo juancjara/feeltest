@@ -12,7 +12,7 @@ class Quiz extends Component {
     constructor(props) {
         super(props);
         //TODO import these from a static file
-        this.questions = ['Do you take time every day to learn something new in your professional role (i.e.using technology, working with a new team)?\n',
+        this.questions = ['Do you take time every day to learn something new in your professional role (i.e. using technology, working with a new team, learn a new responsibility)?\n',
         'Do you take time every day to learn something personally related to your interests/hobby?\n',
         'How open (meaning how much you listen and engage to learn more) are you to another person’s perspective at work about work-related topics?\n',
         'How open (meaning how much you listen and engage to learn more) are you to another person’s perspective when sharing an opinion about your personal growth and development?\n',
@@ -20,22 +20,23 @@ class Quiz extends Component {
         'Do you step out of your comfort zone to try new personal endeavors that you’ve never tried before in your free time?\n',
         'Do you “accept” what someone tells you on the surface, or do you dig deeper to ask questions about what you’re being told?',
         'Do you take the time to get to know someone after you connect on social media?\n',
-        'Do you listen actively as people are sharing information with you (as in, you take notes, ask follow-up questions, repeat back what they’v shared, etc.)?\n',
-        'When someone shares a challenging experience with you, do you take time away from your intended discussion to help them?\n',
-        'When someone shares a challenging experience with you, do you listen and share something that’s happened to you that’s difficult to manage?\n',
-        'How much do you go beyond social media to learn about someone before you engage with them?\n',
-        'Are you objective (without sharing your biased opinion or your company\'s) about the information you share on social media?\n',
-        'Is your communication accurate (meaning you always check the  credibility of the source you’re using) when you share professionally?\n',
-        'Is your communication accurate (meaning you always check the  credibility of the source you’re using) when you share personally?\n',
+        'Do you listen actively as people are sharing information with you (as in, you take notes, ask follow-up questions, repeat back what they’ve shared, etc.)?\n',
+        'When someone shares a challenging experience with you, do you take time away from your intended discussion to help him/her?\n',
+        'When someone shares a challenging experience with you, do you listen and refrain from sharing something that’s happened to you that’s difficult to manage?\n',
+        'Do you go beyond social media to learn about someone before you engage with them?\n',
+        'Are you an objective party (without sharing your biased opinion or your company\'s) about the information you share on social media?\n',
+        'Is your communication accurate (meaning you always check the credibility of the source you’re using) when you share professionally?\n',
+        'Is your communication accurate (meaning you always check the credibility of the source you’re using) when you share personally through channels?\n',
         'Is your communication fair (meant to help without any harmful repercussions from the communication) to all of the parties who are intended to receive the information?\n',
-        'Do you exaggerate (embellish facts or details of a situation) to make your story more compelling professionally?\n',
-        'Do you exaggerate  (embellish facts or details of a situation) to make your story more compelling personally?\n',
-        'How much do you believe and support the mission or cause that you’re sharing?\n',
+        'Do you avoid exaggeration (embellish facts or details of a situation) in your storytelling professionally?\n',
+        'Do you avoid exaggeration  (embellish facts or details of a situation) in your storytelling personally?\n',
+        'Do you believe in and wholeheartedly support your company’s mission or cause that you’re sharing?\n',
         'Do your professional peers think you are passionate about your work goals?\n',
         'Do your close contacts (as in friends and family) think you are passionate about your personal goals?\n',
-        'Do you share information about your work with enthusiasm on social media?\n',
+        'Do you share information about your professional role with enthusiasm on social media?\n',
         'Do you share information about your personal achievements with excitement on social media?\n',
-        'Do people engage with you on social media (i.e. they ask questions, like your posts, re-share) when you discuss work initiatives? \n',];
+        'Do people engage with you on social media (i.e. they ask questions, like your\n' +
+        'posts, re-share) when you discuss work initiatives? \n',];
         this.titles = ['Part I: Face Fears', 'Part II: Engage with Empathy', 'Part III: Use Ethics',
             'Part IV: Unleash the Love of Your Mission'];
         this.scoreReverse= {1: 'Never', 2: 'Rarely', 3: 'Sometimes', 4: 'Often', 5: 'Always'};
@@ -57,7 +58,7 @@ class Quiz extends Component {
     render() {
         console.log(this.scoreArr);
         return (
-            <div className={'quiz-container ' + 'bg' + this.state.currentSection}>
+            <div className={'bg' + this.state.currentSection}>
                 <Header/>
                 <div className={"one"}>
 
@@ -95,12 +96,26 @@ class Quiz extends Component {
                 });
             } else if (event === 'fin') {
                 let finalScore = 0;
+                let firstScore = 0;
+                let secondScore = 0;
+                let thirdScore = 0;
+                let fourthScore = 0;
                 for(let i = 0; i < 24; i++){
+                    if(i < 6){
+                        if(this.scoreArr[i]) firstScore += this.scoreArr[i];;
+                    } else if (i < 12) {
+                        if(this.scoreArr[i]) secondScore += this.scoreArr[i];;
+                    } else if (i < 18) {
+                        if(this.scoreArr[i]) thirdScore += this.scoreArr[i];;
+                    } else {
+                        if(this.scoreArr[i]) fourthScore += this.scoreArr[i];;
+                    }
                     if(this.scoreArr[i]) finalScore += this.scoreArr[i];
                 }
                 this.props.history.push({
                     pathname: '/Result',
-                    state: { score: finalScore }
+                    state: { score: finalScore, firstScore: firstScore, secondScore: secondScore,
+                        thirdScore: thirdScore, fourthScore: fourthScore}
                 });
             }
             this.setState({
@@ -162,7 +177,9 @@ class Quiz extends Component {
             );
         } else {
             return (
-                <Button onClick={() => this.handleQuestionChange('next')} className='btn btn-lg btn-info'>Next</Button>
+                <Button onClick={() => this.handleQuestionChange('next')} className='btn btn-lg btn-info'>
+                    Next
+                </Button>
             );
         } /*else {
             return (

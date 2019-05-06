@@ -127,7 +127,7 @@
 }
 
 .bg2 {
-    background-color: #9ea5ee;
+    background-color: #6a97ee;
 }
 
 .bg3 {
@@ -136,12 +136,12 @@
 }
 
 .quiz-container {
-    background-color: #add8e6;
+    background-color: #b9eeb4;
 }
 
 img {
-    max-height: 40%;
-    max-width: 40%;
+    max-height: 100%;
+    max-width: 100%;
 }
 
 
@@ -174,3 +174,13 @@ li a:hover {
     font-size: 95%;
     margin-top:18px;
 }
+
+.retake {
+    margin-top:90px;
+}
+
+h4 {
+    margin-right:24px;
+    margin-left:24px;
+}
+
