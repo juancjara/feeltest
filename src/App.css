@@ -180,7 +180,11 @@ li a:hover {
 }
 
 h4 {
-    margin-right:24px;
-    margin-left:24px;
+    margin-right:50px;
+    margin-left:50px;
+}
+
+.titleInfo {
+    text-align: left;
 }
 

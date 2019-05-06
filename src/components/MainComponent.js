@@ -29,11 +29,11 @@ class Main extends Component {
                             <div className="col-12 col-sm-6">
                                 <h2>FEEL TEST</h2>
 
-                                <h3>If you FEEL first before you communicate, you'll build stronger relationships
+                                <h3 className={"titleInfo"}>If you FEEL first before you communicate, you'll build stronger relationships
                                     through all of your online channels and in-person too. Here are several questions
-                                    you can ask yourself about Facing your Fears, communicating with Empathy, using
-                                    Ethics and good judgment and discovering your Love for the mission.
-                                    Modern Communicators are generally taught to consider their audience, timing,
+                                    you can ask yourself about Facing your <b>Fears</b>, communicating with <b>Empathy</b>,
+                                    using <b>Ethics</b> and good judgment and discovering your <b>Love</b>
+                                    for the mission. Modern Communicators are generally taught to consider their audience, timing,
                                     channels, messaging and measurement. However, when you add FEEL to your plan,
                                     your communications will resonate and your relationships will grow stronger with
                                     the people that matter.
@@ -41,6 +41,7 @@ class Main extends Component {
                             </div>
                             <div className={"col-12 col-sm-6"}>
                                 <img src={feel} alt="FEEL" />
+                                <h3>This Quiz is still in BETA mode, for best results <b>DO NOT</b> refresh your page when taking the quiz</h3>
                             </div>
                         </div>
                     </div>

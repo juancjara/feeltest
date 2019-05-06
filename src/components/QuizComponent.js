@@ -83,41 +83,39 @@ class Quiz extends Component {
                 break;
             }
         }
-        if(exit){
-            alert('please select an answer for all questions');
-        } else {
-            if (event === 'prev') {
-                this.setState({
-                    currentSection: this.state.currentSection - 1
-                });
-            } else if (event === 'next') {
-                this.setState({
-                    currentSection: this.state.currentSection + 1
-                });
-            } else if (event === 'fin') {
-                let finalScore = 0;
-                let firstScore = 0;
-                let secondScore = 0;
-                let thirdScore = 0;
-                let fourthScore = 0;
-                for(let i = 0; i < 24; i++){
-                    if(i < 6){
-                        if(this.scoreArr[i]) firstScore += this.scoreArr[i];;
-                    } else if (i < 12) {
-                        if(this.scoreArr[i]) secondScore += this.scoreArr[i];;
-                    } else if (i < 18) {
-                        if(this.scoreArr[i]) thirdScore += this.scoreArr[i];;
-                    } else {
-                        if(this.scoreArr[i]) fourthScore += this.scoreArr[i];;
-                    }
-                    if(this.scoreArr[i]) finalScore += this.scoreArr[i];
+
+        if (event === 'prev') {
+            this.setState({
+                currentSection: this.state.currentSection - 1
+            });
+        } else if (event === 'next') {
+            this.setState({
+                currentSection: this.state.currentSection + 1
+            });
+        } else if (event === 'fin') {
+            let finalScore = 0;
+            let firstScore = 0;
+            let secondScore = 0;
+            let thirdScore = 0;
+            let fourthScore = 0;
+            for(let i = 0; i < 24; i++){
+                if(i < 6){
+                    if(this.scoreArr[i]) firstScore += this.scoreArr[i];;
+                } else if (i < 12) {
+                    if(this.scoreArr[i]) secondScore += this.scoreArr[i];;
+                } else if (i < 18) {
+                    if(this.scoreArr[i]) thirdScore += this.scoreArr[i];;
+                } else {
+                    if(this.scoreArr[i]) fourthScore += this.scoreArr[i];;
                 }
-                this.props.history.push({
-                    pathname: '/Result',
-                    state: { score: finalScore, firstScore: firstScore, secondScore: secondScore,
-                        thirdScore: thirdScore, fourthScore: fourthScore}
-                });
+                if(this.scoreArr[i]) finalScore += this.scoreArr[i];
             }
+            this.props.history.push({
+                pathname: '/Result',
+                state: { score: finalScore, firstScore: firstScore, secondScore: secondScore,
+                    thirdScore: thirdScore, fourthScore: fourthScore}
+            });
+
             this.setState({
                 reload0: true,
                 reload1: true,
@@ -127,6 +125,7 @@ class Quiz extends Component {
                 reload5: true,
             });
         }
+        window.scroll(0, 0);
     };
 
     handleOptionChange(id, event) {
