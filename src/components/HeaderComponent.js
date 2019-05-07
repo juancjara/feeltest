@@ -15,7 +15,7 @@ class Header extends Component {
         return(
             <div>
                 <ul>
-                    <li> <NavLink className ="nav-link" to = "/">
+                    <li> <NavLink className ="nav-link" to = "/feel-test">
                         <span className ="fa fa-home fa-lg"></span>Home
                     </NavLink></li>
                     <li> <NavLink className ="nav-link" to = "/FEEL">
