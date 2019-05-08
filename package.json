@@ -2,13 +2,14 @@
   "name": "feel_quiz",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://mattskrobola.github.io/feel-test",
+  "homepage": "https://mattskrobola.github.io/feeltest",
   "dependencies": {
     "bootstrap-social": "^5.1.1",
     "font-awesome": "^4.7.0",
     "gh-pages": "^2.0.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
+    "react-router": "^5.0.0",
     "react-router-dom": "^5.0.0",
     "react-scripts": "2.1.8",
     "reactstrap": "6.5.0"

@@ -45,7 +45,7 @@ class Question extends Component {
         return (
 
             <div className="row">
-                <h4>{this.props.question_text}</h4>
+                <h4>{this.props.number + '.) ' + this.props.question_text}</h4>
                 <form className="form-inline questions">
                     <div className="row">
                         <div className={"col-md-1"}/>

@@ -115,16 +115,17 @@ class Quiz extends Component {
                 state: { score: finalScore, firstScore: firstScore, secondScore: secondScore,
                     thirdScore: thirdScore, fourthScore: fourthScore}
             });
-
-            this.setState({
-                reload0: true,
-                reload1: true,
-                reload2: true,
-                reload3: true,
-                reload4: true,
-                reload5: true,
-            });
         }
+
+        this.setState({
+            reload0: true,
+            reload1: true,
+            reload2: true,
+            reload3: true,
+            reload4: true,
+            reload5: true,
+        });
+
         window.scroll(0, 0);
     };
 
@@ -201,27 +202,33 @@ class Quiz extends Component {
             <div>
                 <h1>{this.titles[currentSection]}</h1>
                 <Question reload={this.state.reload0}
+                          number = {(currentSection * 6) + 1}
                           question_text={this.questions[(currentSection * 6)]}
                           id={0}
                           onChange={this.handleOptionChange}/>
                 <Question reload={this.state.reload1}
                           question_text={this.questions[(currentSection * 6) + 1]}
+                          number = {(currentSection * 6) + 2}
                           id={1}
                           onChange={this.handleOptionChange}/>
                 <Question reload={this.state.reload2}
                           question_text={this.questions[(currentSection * 6) + 2]}
+                          number = {(currentSection * 6) + 3}
                           id={2}
                           onChange={this.handleOptionChange}/>
                 <Question reload={this.state.reload3}
                           question_text={this.questions[(currentSection * 6) + 3]}
+                          number = {(currentSection * 6) + 4}
                           id={3}
                           onChange={this.handleOptionChange}/>
                 <Question reload={this.state.reload4}
                           question_text={this.questions[(currentSection * 6) + 4]}
+                          number = {(currentSection * 6) + 5}
                           id={4}
                           onChange={this.handleOptionChange}/>
                 <Question reload={this.state.reload5}
                           question_text={this.questions[(currentSection * 6) + 5]}
+                          number = {(currentSection * 6) + 6}
                           id={5}
                           onChange={this.handleOptionChange}/>
             </div>

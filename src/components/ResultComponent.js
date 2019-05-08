@@ -14,7 +14,7 @@ class Result extends Component {
         this.goHome = this.goHome.bind(this);
     }
     goHome() {
-        this.props.history.push('/feel-test');
+        this.props.history.push('/');
 
     }
 

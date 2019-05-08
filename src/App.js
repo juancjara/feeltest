@@ -5,20 +5,20 @@ import Main from './components/MainComponent';
 import Quiz from './components/QuizComponent';
 import Result from './components/ResultComponent';
 import About from './components/AboutComponent'
-import { BrowserRouter, Route } from 'react-router-dom';
+import { BrowserRouter, Route, HashRouter } from 'react-router-dom';
 
 
 class App extends Component {
   render() {
     return (
-        <BrowserRouter>
+        <HashRouter>
             <div className="App container">
-                <Route exact path="/feel-test" component={Main} />
+                <Route exact path="/" component={Main} />
                 <Route exact path="/FEEL" component={Quiz} />
                 <Route exact path="/Result" component={Result} />
                 <Route exact path="/About" component={About} />
             </div>
-        </BrowserRouter>
+        </HashRouter>
     );
   }
 }
