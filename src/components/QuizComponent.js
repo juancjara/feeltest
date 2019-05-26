@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Footer from "./FooterComponent";
 import feel from "../Feel_pic.png";
 import { withRouter } from 'react-router-dom'
+import { Markup } from 'interweave';
 import Question from "./QuestionCompoent";
 import {Button} from 'reactstrap';
 import Header from "./HeaderComponent";
@@ -12,33 +13,32 @@ class Quiz extends Component {
     constructor(props) {
         super(props);
         //TODO import these from a static file
-        this.questions = ['Do you take time every day to learn something new in your professional role (i.e. using technology, working with a new team, learn a new responsibility)?\n',
-        'Do you take time every day to learn something personally related to your interests/hobby?\n',
-        'How open (meaning how much you listen and engage to learn more) are you to another person’s perspective at work about work-related topics?\n',
-        'How open (meaning how much you listen and engage to learn more) are you to another person’s perspective when sharing an opinion about your personal growth and development?\n',
-        'Do you step out of your comfort zone to try new activities at work?\n',
-        'Do you step out of your comfort zone to try new personal endeavors that you’ve never tried before in your free time?\n',
-        'Do you “accept” what someone tells you on the surface, or do you dig deeper to ask questions about what you’re being told?',
-        'Do you take the time to get to know someone after you connect on social media?\n',
+        this.questions = ['Do you take time every day to learn something new in your <b>professional</b> role (i.e. using technology, working with a new team, learn a new responsibility)?\n',
+        'Do you take time every day to learn something <b>personally</b> related to your interests/hobby?\n',
+        'How open (meaning how much you listen/engage to learn more) are you to another person’s perspective about work-related topics?\n',
+        'How open (meaning how much you listen/engage to learn more) are you to another person’s perspective about your personal growth and development?\n',
+        'Do you step out of your comfort zone to try new activities at <b>work?</b>\n',
+        'Do you step out of your comfort zone in your free time to try new <b>personal</b> endeavors you’ve never tried before?\n',
+        'Do you want to find out more/ask questions when someone shares an experience with you?',
+        'Do you take the time to get to know someone after you connect on a social media channel?\n',
         'Do you listen actively as people are sharing information with you (as in, you take notes, ask follow-up questions, repeat back what they’ve shared, etc.)?\n',
-        'When someone shares a challenging experience with you, do you take time away from your intended discussion to help him/her?\n',
-        'When someone shares a challenging experience with you, do you listen and refrain from sharing something that’s happened to you that’s difficult to manage?\n',
-        'Do you go beyond social media to learn about someone before you engage with them?\n',
-        'Are you an objective party (without sharing your biased opinion or your company\'s) about the information you share on social media?\n',
-        'Is your communication accurate (meaning you always check the credibility of the source you’re using) when you share professionally?\n',
-        'Is your communication accurate (meaning you always check the credibility of the source you’re using) when you share personally through channels?\n',
-        'Is your communication fair (meant to help without any harmful repercussions from the communication) to all of the parties who are intended to receive the information?\n',
-        'Do you avoid exaggeration (embellish facts or details of a situation) in your storytelling professionally?\n',
-        'Do you avoid exaggeration  (embellish facts or details of a situation) in your storytelling personally?\n',
-        'Do you believe in and wholeheartedly support your company’s mission or cause that you’re sharing?\n',
+        'When someone shares a challenging situation with you, do you take time away from your intended discussion to help him/her?\n',
+        'When someone shares a challenging situation with you, do you refrain from sharing something that’s happened to you?\n',
+        'Do you research information about people beyond their social media profiles to learn about them before you engage?\n',
+        'Are you an objective party (without sharing your biased opinion) about the information you share for work on social media?\n',
+        'Is your communication accurate (meaning you always check the credibility of the source you’re using) when you share <b>professionally?</b>\n',
+        'Is your communication accurate (meaning you always check the credibility of the source you’re using) when you share <b>personally</b> through channels?\n',
+        'Is your communication fair (meant to help without any harmful repercussions) to all of the parties who are intended to receive the information?\n',
+        'Do you avoid exaggeration (embellish facts/details of a situation) in your <b>professional</b> storytelling?\n',
+        'Do you avoid exaggeration (embellish facts/details of a situation) in your <b>personal</b> storytelling?\n',
+        'Do you wholeheartedly support your company’s mission/cause whenever you share on its behalf?\n',
         'Do your professional peers think you are passionate about your work goals?\n',
         'Do your close contacts (as in friends and family) think you are passionate about your personal goals?\n',
-        'Do you share information about your professional role with enthusiasm on social media?\n',
-        'Do you share information about your personal achievements with excitement on social media?\n',
-        'Do people engage with you on social media (i.e. they ask questions, like your\n' +
-        'posts, re-share) when you discuss work initiatives? \n',];
-        this.titles = ['Part I: Face Fears', 'Part II: Engage with Empathy', 'Part III: Use Ethics',
-            'Part IV: Unleash the Love of Your Mission'];
+        'Do you share information enthusiastically about your <b>professional role</b> on social media?\n',
+        'Do you share information enthusiastically about your <b>personal achievements</b> on social media?\n',
+        'Do people engage with you on social media (i.e. they ask questions, like your posts, re-share) when you discuss work initiatives?\n',];
+        this.titles = ['Part I: Face <b>Fears</b>', 'Part II: Engage with <b>Empathy</b>', 'Part III: Use <b>Ethics</b>',
+            'Part IV: Unleash the <b>Love</b> of Your Mission'];
         this.scoreReverse= {1: 'Never', 2: 'Rarely', 3: 'Sometimes', 4: 'Often', 5: 'Always'};
         console.log('contrusctor called');
         this.state = {
@@ -200,7 +200,7 @@ class Quiz extends Component {
     currentQuestions(currentSection) {
         return (
             <div>
-                <h1>{this.titles[currentSection]}</h1>
+                <h1><Markup content={this.titles[currentSection]}/></h1>
                 <Question reload={this.state.reload0}
                           number = {(currentSection * 6) + 1}
                           question_text={this.questions[(currentSection * 6)]}
