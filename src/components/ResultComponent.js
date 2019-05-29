@@ -12,6 +12,7 @@ class Result extends Component {
     super(props);
     this.renderMessage = this.renderMessage.bind(this);
     this.goHome = this.goHome.bind(this);
+
   }
   goHome() {
     this.props.history.push('/');
@@ -39,15 +40,22 @@ class Result extends Component {
 
 
   render() {
+    if (!this.props.location.state) {
+      this.scores = JSON.parse(localStorage.getItem('scores'));
+    } else {
+      this.scores = this.props.location.state;
+      localStorage.setItem('scores', JSON.stringify(this.props.location.state));
+    }
+
     return (
       <div>
         <Header />
-        <h3> Your Score for Part I Face Fears is : {this.props.location.state.firstScore}/30</h3>
-        <h3> Your Score for Part II Engage with Empathy is : {this.props.location.state.secondScore}/30</h3>
-        <h3> Your Score for Part III Use Ethics is : {this.props.location.state.thirdScore}/30</h3>
-        <h3> Your Score for Part IV Face Fears is : {this.props.location.state.fourthScore}/30</h3>
-        <h3> Your Overall Score is {this.props.location.state.score} out of 120</h3>
-        <h2>{this.renderMessage(this.props.location.state.score)}</h2>
+        <h3> Your Score for Part I Face Fears is : {this.scores.firstScore}/30</h3>
+        <h3> Your Score for Part II Engage with Empathy is : {this.scores.secondScore}/30</h3>
+        <h3> Your Score for Part III Use Ethics is : {this.scores.thirdScore}/30</h3>
+        <h3> Your Score for Part IV Face Fears is : {this.scores.fourthScore}/30</h3>
+        <h3> Your Overall Score is {this.scores.score} out of 120</h3>
+        <h2>{this.renderMessage(this.scores.score)}</h2>
 
         <Button onClick={this.goHome} className="btn btn-lg btn-info retake">Home</Button>
 
@@ -59,7 +67,6 @@ class Result extends Component {
 }
 
 Result.propTypes = {
-  location: PropTypes.object,
   history: PropTypes.object,
 };
 
