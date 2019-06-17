@@ -1,23 +1,23 @@
 self.__precacheManifest = [
   {
-    "revision": "4c410049d82424c24cb5",
-    "url": "/feeltest/static/css/main.c414d04c.chunk.css"
+    "revision": "78c61e2f1a1265187075",
+    "url": "/feeltest/static/css/main.5ada0a08.chunk.css"
   },
   {
-    "revision": "4c410049d82424c24cb5",
-    "url": "/feeltest/static/js/main.79835966.chunk.js"
+    "revision": "78c61e2f1a1265187075",
+    "url": "/feeltest/static/js/main.74b1a9b7.chunk.js"
   },
   {
     "revision": "fb13e7b86379bac5952e",
     "url": "/feeltest/static/js/runtime~main.685a589a.js"
   },
   {
-    "revision": "8970c6570c2a3b84d418",
-    "url": "/feeltest/static/css/2.f8b8b8ad.chunk.css"
+    "revision": "f5b4432722359c5f0d49",
+    "url": "/feeltest/static/css/2.d039ce70.chunk.css"
   },
   {
-    "revision": "8970c6570c2a3b84d418",
-    "url": "/feeltest/static/js/2.23a43c62.chunk.js"
+    "revision": "f5b4432722359c5f0d49",
+    "url": "/feeltest/static/js/2.f3ef1fbb.chunk.js"
   },
   {
     "revision": "bd099ca9b22f492afeea32c312574f1c",
@@ -64,7 +64,7 @@ self.__precacheManifest = [
     "url": "/feeltest/static/media/fontawesome-webfont.912ec66d.svg"
   },
   {
-    "revision": "19bc87c563ad994d0f3857634652bff1",
+    "revision": "ec0640da622ee17b3736480fce033260",
     "url": "/feeltest/index.html"
   }
 ];
