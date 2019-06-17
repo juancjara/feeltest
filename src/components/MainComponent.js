@@ -34,15 +34,15 @@ class Main extends Component {
                   If you FEEL first before you communicate, you'll build stronger relationships
                   through all of your online channels and in-person too. Here are several questions
                   you can ask yourself about Facing your <b>Fears</b>, communicating with
-                  <b>Empathy</b>, using <b>Ethics</b> and good judgment and discovering your
-                  <b>Love</b> for the mission.
+                  <b> Empathy</b>, using <b>Ethics</b> and good judgment and discovering your
+                  <b> Love</b> for the mission.
                 </h3>
 
                 <h3 className={'titleInfo'}>
-                                    Modern Communicators are generally taught to consider their audience, timing,
-                                    channels, messaging and measurement. However, when you add FEEL to your plan,
-                                    your communications will resonate and your relationships will grow stronger with
-                                    the people that matter.
+                  Business professionals are generally taught to consider their audience, timing,
+                  channels, messaging and measurement. However, when you add FEEL to your plan,
+                  your communications will resonate and your relationships will grow stronger with
+                  the people that matter.
                 </h3>
               </div>
               <div className={'col-12 col-sm-6'}>

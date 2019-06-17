@@ -20,21 +20,13 @@ class Result extends Component {
 
   renderMessage(score) {
     if (score < 31) {
-      return (
-        <p>You need work with the FEEL first approach.</p>
-      );
+      return <p>You need work with the FEEL first approach.</p>;
     } else if (score < 61) {
-      return (
-        <p>You're starting to FEEL, but you need more focus.</p>
-      );
+      return <p>You're starting to FEEL, but you need more focus.</p>;
     } else if (score < 91) {
-      return (
-        <p>FEEL is a part of your approach ... don't stop now!</p>
-      );
+      return <p>FEEL is a part of your approach ... don't stop now!</p>;
     } else {
-      return (
-        <p>Great work! You FEEL first before you communicate.</p>
-      );
+      return <p>Great work! You FEEL first before you communicate.</p>;
     }
   }
 
