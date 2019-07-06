@@ -15,7 +15,7 @@ class Header extends Component {
           <li>
             {' '}
             <NavLink className="nav-link" to="/FEEL">
-              <span className="fa fa-clipboard fa-lg" />Feel quiz
+              <span className="fa fa-clipboard fa-lg" />Feel First Test
             </NavLink>
           </li>
           <li>

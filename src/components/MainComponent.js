@@ -28,10 +28,10 @@ class Main extends Component {
           <div className="container">
             <div className="row row-header">
               <div className="col-12 col-sm-6">
-                <h2>FEEL TEST</h2>
+                <h2>FEEL FIRST TEST</h2>
 
                 <h3 className={'titleInfo'}>
-                  If you FEEL first before you communicate, you'll build stronger relationships
+                  If you FEEL First before you communicate, you'll build stronger relationships
                   through all of your online channels and in-person too. Here are several questions
                   you can ask yourself about Facing your <b>Fears</b>, communicating with
                   <b> Empathy</b>, using <b>Ethics</b> and good judgment and discovering your
@@ -55,7 +55,7 @@ class Main extends Component {
           </div>
         </Jumbotron>
         <div>
-          <Button onClick={this.goToQuiz} className="btn btn-lg btn-info">Start the FEEL test!</Button>
+          <Button onClick={this.goToQuiz} className="btn btn-lg btn-info">Start the FEEL First Test!</Button>
         </div>
         <Footer />
       </div>
