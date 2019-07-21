@@ -12,12 +12,10 @@ class Main extends Component {
   constructor(props) {
     super(props);
     this.goToQuiz = this.goToQuiz.bind(this);
-
   }
 
   goToQuiz() {
-    this.props.history.push('/FEEL');
-
+    this.props.history.push('/test/0');
   }
 
   render() {
@@ -47,9 +45,7 @@ class Main extends Component {
               </div>
               <div className={'col-12 col-sm-6'}>
                 <img src={feel} alt="FEEL" />
-                <h3 className={'titleInfo'}>The FEEL First Test is currently in Beta. As you move through the test,
-                                    you cannot refresh the page or hit the back arrow on your browser.
-                                    If you do, then you may lose the data you've entered on the page.</h3>
+                <h3 className={'titleInfo'}>The FEEL First Test is currently in Beta.</h3>
               </div>
             </div>
           </div>
