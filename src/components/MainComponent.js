@@ -19,6 +19,7 @@ class Main extends Component {
   }
 
   render() {
+    localStorage.removeItem('scores');
     return (
       <div className="main-container">
         <Header />
@@ -45,7 +46,7 @@ class Main extends Component {
               </div>
               <div className={'col-12 col-sm-6'}>
                 <img src={feel} alt="FEEL" />
-                <h3 className={'titleInfo'}>The FEEL First Test is currently in Beta.</h3>
+                <h3 className={'titleInfo'}>The Feel First Test is currently in Beta.</h3>
               </div>
             </div>
           </div>

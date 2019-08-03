@@ -50,6 +50,7 @@ class Quiz extends Component {
       pathname = '/test/' + (parseInt(this.quizPart) + 1) + '';
     }
 
+
     this.props.history.push({
       pathname: pathname,
       state: {scores: this.scores},

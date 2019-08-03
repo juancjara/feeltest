@@ -4,7 +4,7 @@ import {NavLink} from 'react-router-dom';
 class Header extends Component {
   render() {
     return (
-      <div>
+      <div className={"header-container"}>
         <ul>
           <li>
             {' '}
