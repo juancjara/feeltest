@@ -8,6 +8,7 @@ import About from './components/AboutComponent';
 import Main from './components/MainComponent';
 import Quiz from './components/QuizComponent';
 import Result from './components/ResultComponent';
+import Demographics from './components/DemographicsComponent';
 
 
 class App extends Component {
@@ -16,6 +17,7 @@ class App extends Component {
       <HashRouter>
         <div className="App container">
           <Route exact path="/" component={Main} />
+          <Route exact path="/demographics" component={Demographics} />
           <Route exact path="/test/0" component={Quiz} />
           <Route exact path="/test/1" component={Quiz} />
           <Route exact path="/test/2" component={Quiz} />

@@ -1,21 +1,27 @@
 import React, {Component} from 'react';
-import Footer from './FooterComponent';
-import feel from '../Feel_pic.png';
+import PropTypes from 'prop-types';
 import {Button, Jumbotron} from 'reactstrap';
 import {withRouter} from 'react-router-dom';
-import Header from './HeaderComponent';
-import PropTypes from 'prop-types';
+import ReCAPTCHA from 'react-google-recaptcha';
 
+import Header from './HeaderComponent';
+import Footer from './FooterComponent';
+import feel from '../Feel_pic.png';
 
 class Main extends Component {
-
   constructor(props) {
     super(props);
-    this.goToQuiz = this.goToQuiz.bind(this);
+    this.goToTest = this.goToTest.bind(this);
+    this.startCaptchaRequest = this.startCaptchaRequest.bind(this);
+    this.captchaRef = React.createRef();
   }
 
-  goToQuiz() {
-    this.props.history.push('/test/0');
+  goToTest() {
+    this.props.history.push('/demographics');
+  }
+
+  startCaptchaRequest() {
+    this.captchaRef.current.execute();
   }
 
   render() {
@@ -52,7 +58,13 @@ class Main extends Component {
           </div>
         </Jumbotron>
         <div>
-          <Button onClick={this.goToQuiz} className="btn btn-lg btn-info">Start the FEEL First Test!</Button>
+          <Button onClick={this.startCaptchaRequest} className="btn btn-lg btn-info">Start the FEEL First Test!</Button>
+          <ReCAPTCHA
+            ref={this.captchaRef}
+            sitekey="6LczJbEUAAAAAHkDoUGiRxz8dPBG7wysCSqOUIPG"
+            size="invisible"
+            onChange={this.goToTest}
+          />
         </div>
         <Footer />
       </div>

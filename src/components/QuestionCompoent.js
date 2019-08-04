@@ -51,7 +51,7 @@ class Question extends Component {
   render() {
     return (
       <div className="row">
-        <h4 class="question"><Markup content={`${this.props.number}.) ${this.props.question_text}`} /></h4>
+        <h4 className="question"><Markup content={`${this.props.number}.) ${this.props.question_text}`} /></h4>
         <form className="form-inline questions">
           <div className="row">
             <div className="col-md-1" />
