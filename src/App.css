@@ -232,3 +232,7 @@ h4 {
     font-style: normal;
     text-decoration: none;
 }
+
+.demographic-number {
+    width:80px !important;
+}

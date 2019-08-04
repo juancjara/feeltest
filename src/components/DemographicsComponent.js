@@ -28,9 +28,9 @@ class Demographics extends Component {
       result.push(<h3>{curQuestion.question}</h3>);
       for (let j = 0; j < curQuestion.choices.length; j++) {
         choices.push(
-          <FormGroup fa-align-left check>
-            <Label check className={'demo-text'}>
-              <Input className={'demo-radio'} type="radio" name={'radio' + i} />
+          <FormGroup check>
+            <Label check className={'demographic-text'}>
+              <Input className={'demographic-radio'} type="radio" name={'radio' + i} />
               {' ' + curQuestion.choices[j] + ' '}
             </Label>
           </FormGroup>);
@@ -42,11 +42,15 @@ class Demographics extends Component {
 
   render() {
     return (
-      <div className={'demographics'}>
+      <div className={'demographic-container'}>
         <Header />
         <h2>Demographic Information</h2>
         <div className={'demographic-questions'}>
-          <Form className={'demographicForm'}>
+          <Form className={'demographic-form'}>
+            <h3>What is your Age?</h3>
+            <FormGroup>
+              <Input type="number" className={"demographic-number"}/>
+            </FormGroup>
             {this.renderDemographicQuestions()}
           </Form>
         </div>
