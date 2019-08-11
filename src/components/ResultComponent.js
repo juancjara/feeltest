@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import Footer from './FooterComponent';
 import {Button} from 'reactstrap';
+import {Markup} from 'interweave';
 import PropTypes from 'prop-types';
 
 import Header from './HeaderComponent';
@@ -12,6 +13,8 @@ class Result extends Component {
     super(props);
     this.renderMessage = this.renderMessage.bind(this);
     this.goHome = this.goHome.bind(this);
+    const resultData = require('../static_data/ResultData.json');
+    this.copies = resultData.resultCopy;
 
   }
   goHome() {
@@ -20,13 +23,13 @@ class Result extends Component {
 
   renderMessage(score) {
     if (score < 40) {
-      return <p>You need work with the FEEL first approach.</p>;
+      return <Markup content={this.copies[0]} />;
     } else if (score < 80) {
-      return <p>You're starting to FEEL, but you need more focus.</p>;
+      return <Markup content={this.copies[1]} />;
     } else if (score < 120) {
-      return <p>FEEL is a part of your approach ... don't stop now!</p>;
+      return <Markup content={this.copies[2]} />;
     } else {
-      return <p>Great work! You FEEL first before you communicate.</p>;
+      return <Markup content={this.copies[3]} />;
     }
   }
   // TODO make this function cleaner
@@ -49,16 +52,16 @@ class Result extends Component {
 
     return (
       <div>
-        <Header />
-        <h3> Your Score for Part I Face Fears is : {finalScores.firstScore}/40</h3>
-        <h3> Your Score for Part II Engage with Empathy is : {finalScores.secondScore}/40</h3>
-        <h3> Your Score for Part III Use Ethics is : {finalScores.thirdScore}/40</h3>
-        <h3> Your Score for Part IV Face Fears is : {finalScores.fourthScore}/40</h3>
-        <h3> Your Overall Score is {finalScores.total} out of 160</h3>
-        <h2>{this.renderMessage(finalScores.total)}</h2>
-
+        <div className="result-container">
+          <Header />
+          <h3> Your Score for Part I Face Fears is : {finalScores.firstScore}/40</h3>
+          <h3> Your Score for Part II Engage with Empathy is : {finalScores.secondScore}/40</h3>
+          <h3> Your Score for Part III Use Ethics is : {finalScores.thirdScore}/40</h3>
+          <h3> Your Score for Part IV Face Fears is : {finalScores.fourthScore}/40</h3>
+          <h3> Your Overall Score is {finalScores.total} out of 160</h3>
+          <div className="result-copy">{this.renderMessage(finalScores.total)}</div>
+        </div>
         <Button onClick={this.goHome} className="btn btn-lg btn-info retake">Home</Button>
-
         <Footer />
       </div>
     );

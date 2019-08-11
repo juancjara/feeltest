@@ -36,11 +36,11 @@ class Main extends Component {
                 <h2>FEEL FIRST TEST</h2>
 
                 <h3 className={'titleInfo'}>
-                  If you FEEL First before you communicate, you'll build stronger relationships
+                  If you FEEL before you communicate, you'll build stronger relationships
                   through all of your online channels and in-person too. Here are several questions
                   you can ask yourself about Facing your <b>Fears</b>, communicating with
                   <b> Empathy</b>, using <b>Ethics</b> and good judgment and discovering your
-                  <b> Love</b> for the mission.
+                  <b> Love</b> for your mission.
                 </h3>
 
                 <h3 className={'titleInfo'}>

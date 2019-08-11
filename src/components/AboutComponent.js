@@ -10,7 +10,7 @@ class About extends Component {
       <div>
         <Header />
         <div className={'about-container'}>
-          <h1> About this quiz </h1>
+          <h1> About this Test </h1>
           <h3>
             The FEEL First Test is designed to evaluate your communication in four areas, which includes your ability to:
           </h3>

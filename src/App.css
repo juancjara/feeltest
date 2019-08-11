@@ -236,3 +236,20 @@ h4 {
 .demographic-number {
     width:80px !important;
 }
+
+.result-copy {
+    font-size: 22px;
+    font-weight: 500;
+}
+.result-copy li {
+    font-size: 22px;
+    font-weight: normal;
+}
+
+.result-container {
+    text-align: left;
+}
+
+.result-container .btn {
+    text-align: center;
+}
